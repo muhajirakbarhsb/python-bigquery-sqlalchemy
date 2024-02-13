@@ -57,7 +57,6 @@ def create_bigquery_client(
         default_project = credentials.project_id
     elif credentials_access_token:
         credentials = oauth_credentials.Credentials(credentials_access_token)
-        _, default_project = google.auth.default(scopes=SCOPES)
     else:
         credentials, default_project = google.auth.default(scopes=SCOPES)
 
